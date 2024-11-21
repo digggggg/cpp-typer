@@ -16,7 +16,7 @@ using namespace std;
 Game::Game(const Player &player){
 	this->player = player;
 	difficulty = 0;
-	totalQuestions = 1;
+	totalQuestions = 20;
 }
 
 void Game::setDifficulty(int difficulty){

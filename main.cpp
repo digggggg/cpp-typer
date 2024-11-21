@@ -8,11 +8,25 @@
 #include <iostream>
 #include "Player.h"
 #include "Game.h"
+#include <iomanip>
 using namespace std;
 
+void printCenteredText(const string& text) {
+    // Get the console width (assume 80 columns for simplicity, typical for many terminals)
+    const int consoleWidth = 110;
+
+    // Calculate padding needed to center the text
+    int padding = (consoleWidth - text.length()) / 2;
+
+    // Print the text with padding
+    cout << setw(padding + text.length()) << text << endl;
+}
+
 void displayStartMessage(){
-	cout << "Welcome to CMD Prompt Typing!" << endl;
-	cout << "Enter your name: ";
+	string line1 = "Welcome to CMD Prompt Typing!";
+	string line2 = "Enter your name: ";
+	printCenteredText(line1);
+	printCenteredText(line2);
 }
 
 int main(int argc, char** argv) {
